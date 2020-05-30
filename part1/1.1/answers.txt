@@ -1,0 +1,6 @@
+hannu@hannu-VirtualBox:~/devopswithdocker2020/part1/1.1$ docker ps -a
+CONTAINER ID        IMAGE                                  COMMAND                  CREATED             STATUS                       PORTS               NAMES
+584ea62e0262        nginx                                  "nginx -g 'daemon of…"   38 seconds ago      Exited (0) 21 seconds ago                        quirky_cerf
+f06d720a8b59        nginx                                  "nginx -g 'daemon of…"   41 seconds ago      Exited (0) 14 seconds ago                        busy_wiles
+cc9658ff61ec        nginx                                  "nginx -g 'daemon of…"   47 seconds ago      Up 46 seconds                80/tcp              musing_thompson
+
