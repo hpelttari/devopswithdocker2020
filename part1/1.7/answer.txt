@@ -1,0 +1,35 @@
+hannu@hannu-VirtualBox:~/devopswithdocker2020/part1/1.7$ docker build -t curler .
+Sending build context to Docker daemon  15.87kB
+Step 1/6 : FROM ubuntu:16.04
+ ---> 005d2078bdfa
+Step 2/6 : RUN apt-get update && apt-get -y install curl
+ ---> Using cache
+ ---> ef6f2908f3e8
+Step 3/6 : WORKDIR /mydir
+ ---> Running in 06245d67a7ec
+Removing intermediate container 06245d67a7ec
+ ---> 741e38c11c94
+Step 4/6 : COPY script.sh .
+ ---> 6c21511f2883
+Step 5/6 : RUN chmod +x script.sh
+ ---> Running in 82d5d03b0444
+Removing intermediate container 82d5d03b0444
+ ---> 66277280fdad
+Step 6/6 : CMD ["./script.sh"]
+ ---> Running in bba0427138a5
+Removing intermediate container bba0427138a5
+ ---> 8ae427f19087
+Successfully built 8ae427f19087
+Successfully tagged curler:latest
+hannu@hannu-VirtualBox:~/devopswithdocker2020/part1/1.7$ docker run -it curler
+Input website:
+helsinki.fi
+Searching..
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="http://www.helsinki.fi/">here</a>.</p>
+</body></html>
+
