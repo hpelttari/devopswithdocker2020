@@ -1,0 +1,28 @@
+The secret message is "Docker is easy"
+
+The commands I used (and output):
+
+hannu@hannu-VirtualBox:~/devopswithdocker2020/part1$ docker run -d --rm devopsdockeruh/exec_bash_exercise
+78d5c9bebbf0df414e52142d20659a8370a942195c3ced05cb7a38089fd1b5fc
+hannu@hannu-VirtualBox:~/devopswithdocker2020/part1$ docker container ls
+CONTAINER ID        IMAGE                               COMMAND                  CREATED             STATUS              PORTS               NAMES
+78d5c9bebbf0        devopsdockeruh/exec_bash_exercise   "docker-entrypoint.s…"   6 seconds ago       Up 4 seconds                            fervent_hamilton
+hannu@hannu-VirtualBox:~/devopswithdocker2020/part1$ docker exec -it fervent_hamilton bash
+root@78d5c9bebbf0:/usr/app# tail -f ./logs.txt
+Wed, 03 Jun 2020 13:51:36 GMT
+Wed, 03 Jun 2020 13:51:39 GMT
+Wed, 03 Jun 2020 13:51:42 GMT
+Wed, 03 Jun 2020 13:51:45 GMT
+Secret message is:
+"Docker is easy"
+Wed, 03 Jun 2020 13:51:51 GMT
+Wed, 03 Jun 2020 13:51:54 GMT
+Wed, 03 Jun 2020 13:51:57 GMT
+Wed, 03 Jun 2020 13:52:00 GMT
+Secret message is:
+"Docker is easy"
+Wed, 03 Jun 2020 13:52:06 GMT
+^C
+root@78d5c9bebbf0:/usr/app# exit
+exit
+
