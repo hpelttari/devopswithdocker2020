@@ -1,0 +1,4 @@
+commands:
+hannu@hannu-VirtualBox:~/devopswithdocker2020/part1/1.10$ docker build -t ex10_app .
+hannu@hannu-VirtualBox:~/devopswithdocker2020/part1/1.10$ docker run -p 5000:5000 ex10_app
+
