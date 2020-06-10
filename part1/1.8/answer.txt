@@ -1,0 +1,22 @@
+commands used:
+
+hannu@hannu-VirtualBox:~/devopswithdocker2020/part1/1.8$ docker pull devopsdockeruh/first_volume_exercise
+hannu@hannu-VirtualBox:~/devopswithdocker2020/part1/1.8$ touch logs.txt
+hannu@hannu-VirtualBox:~/devopswithdocker2020/part1/1.8$ docker run -v $(pwd)/logs.txt:/usr/app/logs.txt devopsdockeruh/first_volume_exercise
+
+output:
+Wrote to file /usr/app/logs.txt
+Wrote to file /usr/app/logs.txt
+Wrote to file /usr/app/logs.txt
+Wrote to file /usr/app/logs.txt
+Wrote to file /usr/app/logs.txt
+^CClosing file
+
+
+contents of logs.txt:
+Wed, 10 Jun 2020 15:41:05 GMT
+Wed, 10 Jun 2020 15:41:08 GMT
+Wed, 10 Jun 2020 15:41:11 GMT
+Wed, 10 Jun 2020 15:41:14 GMT
+Secret message is:
+"Volume bind mount is easy"
