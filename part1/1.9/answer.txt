@@ -1,0 +1,5 @@
+commands:
+hannu@hannu-VirtualBox:~/devopswithdocker2020/part1/1.9$ docker pull devopsdockeruh/ports_exercise
+hannu@hannu-VirtualBox:~/devopswithdocker2020/part1/1.9$ docker run -p 5000:80 devopsdockeruh/ports_exercise
+
+the app is now running on localhost:5000 in my machine. The site says "Ports configured correctly!!"".
