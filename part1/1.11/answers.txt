@@ -1,0 +1,2 @@
+hannu@hannu-VirtualBox:~/devopswithdocker2020/part1/1.11$ docker build --no-cache -t ex11_app .
+hannu@hannu-VirtualBox:~/devopswithdocker2020/part1/1.11$ touch logs.txt && docker run -d -v $(pwd)/logs.txt:/backend_app/logs.txt -p 8000:8000 ex11_app
