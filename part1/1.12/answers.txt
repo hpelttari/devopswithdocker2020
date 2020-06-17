@@ -1,0 +1,11 @@
+Dockerfile for frontend is in subfolder 1.10
+and Dockerfile for backend is in subfolder 1.11
+
+commands to build and start backend:
+hannu@hannu-VirtualBox:~/devopswithdocker2020/part1/1.12/1.11$ docker build -t backend_app .
+hannu@hannu-VirtualBox:~/devopswithdocker2020/part1/1.12/1.11$ touch logs.txt && docker run -d -v $(pwd)/logs.txt:/backend_app/logs.txt -p 8000:8000 backend_app
+
+
+commands to build and start frontend:
+hannu@hannu-VirtualBox:~/devopswithdocker2020/part1/1.12/1.10$ docker build -t frontend_app .
+hannu@hannu-VirtualBox:~/devopswithdocker2020/part1/1.12/1.10$ docker run -d -p 5000:5000 frontend_app
