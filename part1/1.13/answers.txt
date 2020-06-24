@@ -1,0 +1,4 @@
+commands to build and run:
+
+docker build -t spring_app .
+docker run -d -p 8080:8080 spring_app
