@@ -1,0 +1,5 @@
+Dockerhub repository url: https://hub.docker.com/repository/docker/fantinewton/python_ds_docker_hy
+
+The container has ubuntu as the operating system and has python3.7, pip and
+venv installed. It also has python libraries numpy, pandas, sklearn and
+matplotlib installed for data science.
