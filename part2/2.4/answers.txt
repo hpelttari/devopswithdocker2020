@@ -1,0 +1,2 @@
+command to start the container scaled:
+docker-compose up --scale compute=5
