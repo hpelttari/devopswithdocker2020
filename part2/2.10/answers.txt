@@ -1,0 +1,2 @@
+I changed the Enviroment variable from frontend dockerfile to  ENV API_URL="/api"
+and the environment variable from backend dockerfile to ENV FRONT_URL="http://localhost" 
