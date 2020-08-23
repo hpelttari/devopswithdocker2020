@@ -1,0 +1,13 @@
+build with following command:
+   docker build --build-arg DOCKER_USERNAME=<username> --build-arg
+   DOCKER_PASSWORD=<password> -t <tag> .
+
+replace the <> with appropriate content
+ 
+
+run with following command:
+   docker run -v /var/run/docker.sock:/var/run/docker.sock <tag> <github
+   repository url> <username>/<image tag> 
+
+<tag> is the same the image was built with and <image tag> is the tag
+for to image to be pushed to dockerhub.
