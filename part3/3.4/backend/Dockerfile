@@ -9,6 +9,8 @@ RUN apt-get install -y nodejs \
     && useradd -m backend \
     && chown backend -R /backend_app
 
+USER backend
+
 ENV FRONT_URL="http://localhost:5000" 
 EXPOSE 8000
 CMD npm start
